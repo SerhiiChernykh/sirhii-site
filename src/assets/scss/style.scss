@@ -1,0 +1,137 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./header";
+@import "./section.scss";
+@import "./card.scss";
+@import "./slider.scss";
+@import "./footer.scss";
+@import "./form.scss";
+@import "./modal.scss";
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: normal;
+  min-width: 320px;
+}
+
+.container{
+  max-width: 1542px;
+  margin: 0 auto;
+  z-index: 5;
+  position: relative;
+}
+
+.purple {
+  color: $color-secodary-purple;
+}
+
+.title{
+  text-transform: uppercase;
+}
+
+.logo {
+  background-image: url('../img/logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 189px;
+  height: 33px;
+}
+
+.btn {
+  border: none;
+  width: 311px;
+  height: 77px;
+  box-shadow: 0 16px 24px $color-secodary-black;
+  background-color: $color-primary-purple;
+  border-radius: 38px;
+  color: $color-white;
+  text-transform: uppercase;
+  text-align: left;
+  background-repeat: no-repeat;display: inline-block;
+  transition: background-color ease .3s ;
+
+  &:hover{
+    background-color: $color-secodary-purple;
+    transition: background-color ease .3s ;
+  }
+
+  &__link:not(:last-child){
+    margin-right: 50px;
+  }
+  
+  &__apple {
+    background-image: url('../img/Icon_-_Apple.svg');
+    background-position: 44px 15px;
+    padding-top: 23px;
+    padding-left: 105px;  
+  }
+
+  &__estimate {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 15px;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  &__google {
+    background-image: url('../img/Icon_-_Google_Play.svg');
+    background-position: 44px 15px;
+    padding-top: 23px;
+    padding-left: 105px;  
+  }
+}
+
+@media (max-width: 1542px){
+  .btn{
+    &__link:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px){
+  .logo {
+    background-image: url('../img/logo.svg');
+    background-size: cover;
+    width: 150px;
+    height: 24px;
+  }
+  .btn{
+    width: 142px;
+    height: 39px;
+    font-size: 8px;
+    margin-top: 0;
+
+    &__apple {
+      background-position: 20px 8px;
+      background-size: 15px;
+      padding-left: 45px; 
+      padding-top: 10px;
+    }
+
+    &__estimate {
+      padding: 10px;
+    }
+  
+    &__google {
+      background-position: 21px 8px;
+      background-size: 15px;
+      padding-left: 54px;
+      padding-top: 10px;
+    }
+    &:not(:last-child){
+      margin-right: 8px;
+    }
+  }
+}

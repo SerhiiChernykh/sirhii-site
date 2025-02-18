@@ -1,0 +1,95 @@
+.slider__block{
+  display: none;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .slider__block{
+    display: block;
+    padding: 0 25px;
+  }
+  .slider{
+    margin: 0 auto;
+    overflow: hidden;
+  
+    &__top{
+      height: 306px;
+      padding: 25px 19px;
+      position: relative;
+    }
+    &__img{
+      position: absolute;
+      top: 80px;
+      left: 52px;
+      z-index: 2;
+      &--second{
+        top: 90px;
+        left: 10px;
+      }
+    }
+    &__body{
+      min-height: 283px;
+      padding: 81px 15px 70px 15px;
+    }
+    &__container{
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    &--second{
+      background-color: $color-tertiary-grey;
+    }
+    &--third{
+      background-color: $color-primary-purple;
+    }
+  }
+  .block{
+    &__number{
+      &--value{
+        font-size: 14px;
+      }
+    }
+    &__title{
+      font-size: 28px;
+    }
+    &__text{
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.75px;
+      padding-right: 25px;
+    }
+  }
+  .fotorama{
+    position: relative;
+    &__dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $color-primary-grey;
+      border: none;
+    }
+    &__nav{
+      &-wrap{
+        position: absolute;
+        bottom: 20px;
+      }
+    }
+    &__wrap {
+      margin: 0 auto;
+    }
+    &__shadows--left::before {
+      display: none;
+    }
+    &__shadows--right::after {
+      display: none;
+    }
+  }
+  .fotorama__nav__frame.fotorama__nav__frame--dot.fotorama__active{
+    .fotorama__dot{
+      width: 11px;
+      height: 11px;
+      background-color: $color-primary-purple;
+      border: 1px solid $color-white;
+    }
+  }
+}

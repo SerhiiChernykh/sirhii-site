@@ -1,0 +1,167 @@
+.card {
+  display: flex;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  &__img {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  &__body {
+    flex-basis: 50%;
+    max-width: 765px;
+    padding: 257px 25px 122px 127px;
+    position: relative;
+
+    &--reverse{
+      max-width: 768px;
+      padding: 257px 100px 159px 15px;
+
+    }
+  }
+
+  &__number {
+    width: 168px;
+    height: 155px;
+    background-color: $color-primary-purple;
+    position: absolute;
+    top: 211px;
+    left: -85px;
+    display: flex;
+
+    &--reverse{
+      left: 685px;
+    }
+
+    &--value{
+      margin: auto;
+      color: $color-tertiary-grey;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 34.49px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+
+      &::after{
+        content: '';
+        display: block;
+        height: 5px;
+        border-radius: 2px;
+        background-color: $color-white;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__title {
+    color: $color-primary-grey;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    margin-bottom: 119px;
+    opacity: 0.4;
+  }
+
+  &__description {
+    min-width: 322px;
+    min-height: 164px;
+    position: relative;
+    padding-bottom: 15px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    letter-spacing: 1.2px;
+
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 22px;
+      height: 5px;
+      border-radius: 2px;
+      background-color: $color-primary-purple;
+    }
+  }
+}
+
+@media (max-width: 1542px) {
+  .card {
+    display: block;
+
+    &__img{
+      height: 768px;
+      width: 100%;
+    }
+
+    &__body{
+      max-width: 100%;
+      display: block;
+      padding: 73px 34px 63px 34px;
+    }
+
+    &__number{
+      width: 116px;
+      height: 116px;
+      top: -80px;
+      left: 33px;
+    }
+
+    &__title{
+      margin-bottom: 36px;
+    }
+
+    &__description{
+      min-height: 0;
+      max-width: 650px;
+      padding-bottom: 30px;
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .card{
+    &__img{
+      height: 351px;
+    }
+
+    &__body{
+      padding: 35px 86px 51px 19px;
+    }
+
+    &__number{
+      width: 70px;
+      height: 70px;
+      top: -61px;
+      left: 19px;
+
+      &--value{
+        font-size: 14px;
+      }
+    }
+
+    &__title{
+      font-size: 28px;
+      line-height: 34.49px;
+      margin-bottom: 23px;
+    }
+
+    &__secription{
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.8px;
+      min-width: 215px;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.section {
+  display: block;
+  overflow: hidden;
+
+  &__container{
+    max-width: 1540px;
+    display: flex;
+  }
+  &__title{
+    color: $color-secondary-grey;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 94px;
+    }
+  &__wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--reverse{
+      flex-direction: row-reverse;
+    }
+
+    &--first{
+      padding: 112px 25px 60px 0;
+    }
+    &--second{
+      background-color: $color-tertiary-grey;
+      padding: 64px 25px 61px 0;
+    }
+    &--third{
+      background-color: $color-primary-purple;
+      padding: 90px 25px 102px 0;
+    }
+    &--forth{
+      padding: 112px 0 60px 25px;
+
+    }
+    &--fifth{
+      background-color: #f5f5f7;
+      padding: 63px 0 71px 25px;
+    }
+    &--sixth{
+      background-color:#0a0e34;
+      padding: 98px 0 92px 25px;
+    }
+  }
+}
+
+.block {
+  position: relative;
+  flex-basis: 50%;
+  width: 700px;
+
+
+  &--img{
+    flex-basis: 50%;
+    width: 700px;
+  }
+
+		&__img--first {
+      width: 696px;
+      height: 960px;
+      background-image: url('../img/footboller-1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -40px;
+      left: -635px;
+    }
+    &__img--second{
+      width: 991px;
+      height: 815px;
+      background-image: url('../img/bscketboller-1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: -145px;
+      left: 500px;
+      overflow: hidden;
+    }
+
+
+		&__number {
+      display: inline-block;
+      vertical-align: top;
+
+      &--value{
+        padding-top: 3px;
+        margin: auto;
+        color: $color-primary-black;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 0.9px;
+  
+        &::after{
+          content: '';
+          margin-top: 3px;
+          display: block;
+          height: 5px;
+          border-radius: 2px;
+          background-color: $color-primary-purple;
+        }
+
+        &--third{
+          &::after{
+            background-color: $color-white;
+          }
+        }
+        &--purple{
+          color: $color-secodary-purple;
+        }
+      }
+		}
+
+		&__title {
+      display: inline-block;
+      vertical-align: top;
+      color: $color-primary-grey;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      padding-bottom: 31px;
+		}
+
+		&__text {
+      color: $color-primary-black;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      max-width: 600px;
+
+      &--third{
+        color: $color-white;
+      }
+		}
+}
+
+@media (max-width: 1542px) {
+  .section{
+    &__container{
+      max-width: 768px;
+    }
+    &__title{
+      margin-bottom: 59px;
+    }
+    &__wrap{
+      &--first{
+        padding: 82px 25px 73px 0;
+      }
+      &--second{
+        padding: 40px 25px 38px 0;
+      }
+      &--third{
+        padding: 40px 25px 38px 0;
+      }
+      &--forth{
+        padding: 79px 0 17px 25px;
+      }
+      &--fifth{
+        padding: 63px 0 70px 25px;
+      }
+      &--sixth{
+        padding: 52px 0 55px 25px;
+      }
+    } 
+
+  }
+  .block{
+    flex-basis: 60%;
+    width: 482px;
+
+    &--img{
+      flex-basis: 40%;
+    }
+    &__img--first {
+      width: 497px;
+      height: 718px;
+      background-image: url('../img/footboller-sm.png');
+      top: -16px;
+      left: -455px;
+    }
+    &__img--second{
+      width: 690px;
+      height: 565px;
+      background-image: url('../img/basketboller-sm.png');
+      top: -50px;
+      left: 300px;
+    }
+
+  }
+
+}
+
+@media (max-width: 767px) {
+  .section{
+    display: none;
+    &__title{
+      font-size: 50px;
+    }
+  }
+
+}

@@ -8,30 +8,33 @@ import { contacts } from "@/utils/datasets";
   <header class="header">
     <div class="container">
       <!-- <div class="header__img"></div> -->
-      <div class="header__topsection">
-        <!-- <a href="#"><div class="logo"></div></a> -->
-        <div class="header__text">handyman service for your home</div>
-        <div class="header__text">Tel: {{ contacts.phoneNumber }}</div>
-        <div class="header__text">Email: {{ contacts.email }}</div>
-      </div>
-      <div class="header__midlesection">
-        <h1 class="header__title title">Professional service </h1>
-        <h1 class="header__title title">for your home!</h1>
-      </div>
+      <div>
+          <div class="header__topsection">
+          <!-- <a href="#"><div class="logo"></div></a> -->
+          <div class="header__text">handyman service for your home</div>
+          <div class="header__text">Tel: {{ contacts.phoneNumber }}</div>
+          <div class="header__text">Email: {{ contacts.email }}</div>
+        </div>
 
-      <menu class="menu">
-        <ul class="menu__list">
-          <li class="menu__listitem" @click="scrollToElementId('services')">
-            <a class="menu__link">Services</a>
-          </li>
-          <li class="menu__listitem" @click="scrollToElementId('form')">
-            <a class="menu__link">Estimate</a>
-          </li>
-          <li class="menu__listitem" @click="scrollToElementId('contacts')">
-            <a class="menu__link">contacts</a>
-          </li>
-        </ul>
-      </menu>
+        <div class="header__midlesection">
+          <h1 class="header__title title">Professional service </h1>
+          <h1 class="header__title title">for your home!</h1>
+        </div>
+
+        <menu class="menu">
+          <ul class="menu__list">
+            <li class="menu__listitem" @click="scrollToElementId('services')">
+              <a class="menu__link">Services</a>
+            </li>
+            <li class="menu__listitem" @click="scrollToElementId('form')">
+              <a class="menu__link">Estimate</a>
+            </li>
+            <li class="menu__listitem" @click="scrollToElementId('contacts')">
+              <a class="menu__link">contacts</a>
+            </li>
+          </ul>
+        </menu>
+      </div>
 
       <div class="header__bottom" @click="scrollToElementId('form')">
         <a class="btn__link">
@@ -46,5 +49,5 @@ import { contacts } from "@/utils/datasets";
 </template>
 
 <style scoped lang='scss'>
-  
+
 </style> 

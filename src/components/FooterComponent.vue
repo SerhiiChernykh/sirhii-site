@@ -6,6 +6,8 @@ import { contacts } from "@/utils/datasets";
 <template>
   <footer class="footer">
     <div></div>
+
+    <div class="footer__logo"></div>
     
     <div class="footer__container">
       <div class="footer__top">
@@ -14,10 +16,13 @@ import { contacts } from "@/utils/datasets";
           Always at your service!
         </h2>
         <p class="footer__decription">
-          I’m always happy to help solve any household issues and ensure your comfort. Thank you for your trust and for choosing me!
+          I’m always happy to help solve any household issues and ensure your comfort. Thank you for your trust and for choosing my team!
         </p>
         <p class="footer__decription">
           Serhii Chernykh 
+        </p>
+        <p class="footer__decription">
+          and {{ contacts.companyName }}
         </p>
       </div>
     </div>

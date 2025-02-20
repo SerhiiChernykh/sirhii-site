@@ -53,6 +53,15 @@
     padding-bottom: 25px;
   }
 
+  &__logo {
+    position: absolute;
+    width: 300px;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+
   &.container {
     display: flex;
     flex-direction: column;
@@ -176,6 +185,16 @@
 
     &__bottom {
       margin-bottom: 150px;
+    }
+
+    &__logo {
+      position: relative;
+      margin: 0 auto;
+      width: 200px;
+  
+      & img {
+        max-width: 100%;
+      }
     }
   }
 

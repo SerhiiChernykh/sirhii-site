@@ -9,9 +9,13 @@ import { contacts } from "@/utils/datasets";
     <div class="container">
       <!-- <div class="header__img"></div> -->
       <div>
-          <div class="header__topsection">
+        <div class="header__topsection">
+          <div class="header__logo">
+            <img src="/img/logo.png" alt="logo">
+          </div>
           <!-- <a href="#"><div class="logo"></div></a> -->
-          <div class="header__text">handyman service for your home</div>
+          <!-- <div class="header__text">handyman service for your home</div> -->
+          <div class="header__text">{{ contacts.companyName }}</div>
           <div class="header__text">Tel: {{ contacts.phoneNumber }}</div>
           <div class="header__text">Email: {{ contacts.email }}</div>
         </div>
